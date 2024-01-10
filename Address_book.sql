@@ -15,3 +15,15 @@ Insert into AddressBook_Table values ('Carrom ' , 'Marry' ,   ' Beer road ','Sat
  Alter table AddressBook_Table
  modify column zip varchar (20);
  Select * from AddressBook_Table;
+
+
+
+UPDATE AddressBook_Table
+SET Address = 'xyz', city = 'New City',
+ state = 'New State', zip = 'New Zip', phonNo = '9874563210', 
+ email = 'newemail@example.com'
+WHERE firstname = 'joy ' ;
+select * from AddressBook_Table;
+SET SQL_SAFE_UPDATES = 0;-- safe mode is off boz large content is changed
+UPDATE AddressBook_Table
+SET Address='new add' where firstname='joy'; 
