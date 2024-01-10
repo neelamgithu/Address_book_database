@@ -1,0 +1,2 @@
+create table AddressBook_Table(firstname varchar(20) ,lastname varchar(20), Address varchar(100),city varchar (50),state varchar(20),zip int(6),phonNo int (11), Email varchar(20));
+select* from AddressBook_Table;
