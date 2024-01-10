@@ -24,7 +24,11 @@ SET Address = 'xyz', city = 'New City',
  email = 'newemail@example.com'
 WHERE firstname = 'joy ' ;
 select * from AddressBook_Table;
+
+
 SET SQL_SAFE_UPDATES = 0;-- safe mode is off boz large content is changed
+
+
 UPDATE AddressBook_Table
 SET Address='new add' where firstname='joy'; 
 
@@ -34,3 +38,18 @@ show tables;
 
 Select * from AddressBook_Table
 where city='Kolhapur' or state='AP';
+
+-- Get the size of AddressBooktable count by City and State
+SELECT city, state, COUNT(*) AS address_count
+FROM AddressBook_Table
+GROUP BY city, state;
+
+
+Insert into AddressBook_Table values ('Stev ' , 'obs' ,   'Ring road ','Kolhapur' ,'MP' ,'423492','9665587412' ,'stev@gmail.com');
+Insert into AddressBook_Table values ('Stev ' , 'obs' ,   'Ring road ','Kolhapur' ,'MP' ,'423492','9665587412' ,'stev@gmail.com');
+ delete from AddressBook_Table where firstname='Stev ';
+ 
+-- sorted alphabetically by Person’s name for a given city
+ SELECT * from AddressBook_Table
+ where city ='kolhapur'
+ order by firstname;
