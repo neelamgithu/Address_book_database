@@ -53,3 +53,27 @@ Insert into AddressBook_Table values ('Stev ' , 'obs' ,   'Ring road ','Kolhapur
  SELECT * from AddressBook_Table
  where city ='kolhapur'
  order by firstname;
+ 
+ -- Ability to identify each Address Book with name and Type. - Here the
+  Alter table AddressBook_Table
+ Add Type varchar(20);
+  SELECT * from AddressBook_Table;
+ 
+ 
+ Update AddressBook_Table
+ Set Type ='family'
+ where firstname ='joy ';
+ SELECT * from AddressBook_Table;
+ update AddressBook_Table
+ set Type ='friend'
+ where firstname='Harry ';
+ SELECT * from AddressBook_Table;
+ 
+  Update AddressBook_Table
+ Set Type ='family'
+ where firstname ='Wolf ';
+ SELECT * from AddressBook_Table;
+ 
+ 
+ Insert into AddressBook_Table values ('Roy ' , 'Stapin' ,   'Aray road ','Ichalkarani' ,'maharashtra' ,'123456','7896541236' ,'roy@gmail.com');
+ SELECT * from AddressBook_Table;
