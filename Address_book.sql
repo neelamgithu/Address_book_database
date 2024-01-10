@@ -27,3 +27,10 @@ select * from AddressBook_Table;
 SET SQL_SAFE_UPDATES = 0;-- safe mode is off boz large content is changed
 UPDATE AddressBook_Table
 SET Address='new add' where firstname='joy'; 
+
+Delete from AddressBook_Table
+where firstname ='Roy' and lastname ='Stapin';
+select * from AddressBook_Table;
+
+Select * from AddressBook_Table
+where city='Kolhapur' or state='AP';
